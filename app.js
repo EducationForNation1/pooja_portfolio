@@ -8,14 +8,15 @@ const app = express();
 // const port = 3000;
 // const DATABASEURL = process.env.DATABASEURL||'mongodb://127.0.0.1:27017/';
 dotenv.config();
-const port = process.env.PORT||3000;
 const DATABASEURL = process.env.MONGO_URI;
-const secret   = process.env.SECRET_KEY;
+const port = process.env.PORT||3000;
+
+
 
 
 // database connection
-// await connectDB(DATABASEURL)
-await connectDB()
+ connectDB(DATABASEURL)
+// await connectDB()
 // body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
 
