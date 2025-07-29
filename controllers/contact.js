@@ -20,12 +20,14 @@ const userContact = async(req,res)=>{
         if(user){
           await user.save();
           console.log("Contact saved!")
+           res.redirect('/contact')
 
         }else{
             console.log("Contact data not saved!")
+             res.redirect('/contact')
         }
         console.log(req.body)
-        res.redirect('/contact')
+       
     } catch (error) {
         console.log(error.message)
     }
