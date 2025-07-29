@@ -1,5 +1,9 @@
 const home = (req,res)=>{
-   res.render('index');
+   try {
+      res.render('index');
+   } catch (error) {
+      console.log(error.message)
+   }
 }
 
 export {home}
