@@ -23,6 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 // setup ejs template
 app.set('views', './views');
 app.set('view engine','ejs');
+app.set("views", join(__dirname, "views"));
 
 // setup static file
 app.use(express.static(path.join(process.cwd(),'public')))
