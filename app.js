@@ -14,8 +14,8 @@ const secret   = process.env.SECRET_KEY;
 
 
 // database connection
-await connectDB(DATABASEURL)
-
+// await connectDB(DATABASEURL)
+await connectDB()
 // body-parser
 app.use(bodyParser.urlencoded({ extended: true }))
 

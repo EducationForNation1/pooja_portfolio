@@ -5,7 +5,8 @@ const connectDB = async(DATABASEURL)=>{
         const dbOption={
             dbName:'portfolio'
         }
-       const response = await mongoose.connect(DATABASEURL,dbOption);
+    //    const response = await mongoose.connect(DATABASEURL,dbOption);
+    const response = await mongoose.connect('mongodb+srv://rgtechfreelearning:3uAxzPp5iDHDBcGH@portfolio.gru6pra.mongodb.net/')
        if(response){
         console.log("Database connected Successfully!")
        }else{
